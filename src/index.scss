@@ -1,0 +1,92 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.pagination {
+  display: flex;
+  justify-content: flex-end;
+  list-style: none;
+  gap: 3px;
+
+  li {
+    border: 1px solid #999;
+    padding: 2px;
+    background-color: #cdcdcd;
+    border-radius: 2px;
+
+    &.next, &.previous {
+      border: unset;
+      background-color: unset;
+
+      &.disabled {
+        color:#999;
+      }
+    }
+  }
+}
+
+.list-beer {
+  margin-inline: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content:  flex-start;
+  gap: 10px;
+
+  .beer-card-item {
+    position: relative;
+    width: 23%;
+    border: 1px solid;
+    border-radius: 5px;
+    padding-block: 20px;
+
+    &.close {
+      max-height: 111px;
+
+      .icon {
+        width: 30px;
+        height: auto;
+      }
+    }
+
+    .arrow {
+      display: flex;
+      justify-content: space-between;
+      margin-inline: 10px;
+      img {
+        width: 20px;
+        height: 20px;
+      }
+
+      p {
+        margin: 0;
+        display: -webkit-box;
+        text-overflow: ellipsis;
+        overflow-y: hidden;
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical;
+      }
+    }
+    img{
+      height: 150px;
+    }
+
+    .favorite-image {
+      position: absolute;
+      inset-inline-end: 10px;
+      inset-block-start: 10px;
+      width: 20px;
+      height: 20px;
+    }
+  }
+}
+
