@@ -4,11 +4,9 @@ import BeerContext from './BeerContext.tsx';
 
 
 import { BeerCard } from './BeerCard.tsx';
-import {useLocation} from "react-router-dom";
 
 export default function BeerList({data, isPageFavorite}){
     const providerOptions=useContext(BeerContext);
-    // if(useLocation().pathname.endsWith('favorite')){
 
     return(
         <BeerProvider value={providerOptions}>

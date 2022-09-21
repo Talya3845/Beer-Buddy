@@ -6,14 +6,11 @@ import downArrowImage from './images/down-arrow.png';
 import upArrowImage from './images/up-arrow.png';
 
 export function BeerCard({item, isPageFavorite}){
-    const listFavorite=useContext(BeerContext).data;
     const changeFavorite=useContext(BeerContext).changeFavorite;
     const fnIsFavorite= useContext(BeerContext).isFavorite;
     const [isDisplay,setIsDisplay]=useState(false);
 
     const [isFavorite,setIsFavorite]=useState(fnIsFavorite(item));
-    useEffect (()=>{
-    })
 
     //export to other file and import here
     const Favorite=()=>(
