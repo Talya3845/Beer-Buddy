@@ -36,7 +36,7 @@ export function BeerCard({item, isPageFavorite}){
                     <img className="" src={upArrowImage} onClick={arrowClickEvent}/>
                 </div>
                     <img className="icon" src={item.image_url}/>
-                    {isFavorite ? <Favorite />: <NoFavorite />}
+                    {isFavorite ? Favorite() : NoFavorite()}
                     <h2>{item.first_brewed}</h2>
                     <p>{item.name}</p>
                     <p>{item.food_pairing}</p>
